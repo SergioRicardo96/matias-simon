@@ -89,9 +89,13 @@
         .hero-inner{position:relative;z-index:2;max-width:600px}
 
         .crown-label{
+            position:relative;z-index:3;
             font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.5em;text-transform:uppercase;
-            color:#f0c060;opacity:0;animation:fadeUp 1.2s .3s forwards;margin-bottom:1.5rem;
-            display:flex;align-items:center;gap:.8rem;
+            color:#f0c060;opacity:0;animation:fadeUp 1.2s .3s forwards;margin-bottom:2rem;
+            display:flex;align-items:center;gap:.8rem;white-space:nowrap;
+        }
+        @media(max-width:480px){
+            .crown-label{font-size:.52rem;letter-spacing:.22em;gap:.5rem}
         }
         .crown-label::before,.crown-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#c9943a,#8a5010)}
         .crown-label::after{background:linear-gradient(90deg,#8a5010,#c9943a,transparent)}
@@ -102,6 +106,7 @@
             opacity:0;animation:scaleIn 1.4s .5s cubic-bezier(.34,1.4,.64,1) forwards;
         }
         .moon-orbit{
+            argin-top: 32px;
             position:absolute;inset:0;
             animation:moonFloat 7s 1.9s ease-in-out infinite;
             transition:scale .4s cubic-bezier(.34,1.4,.64,1);
@@ -694,15 +699,15 @@
         }
         .story-line:nth-child(1){font-size:clamp(1.6rem,5vw,3.8rem)}
         .story-line:nth-child(2),
-        .story-line:nth-child(3),
-        .story-line:nth-child(4){font-size:clamp(.95rem,3vw,2rem)}
+        .story-line:nth-child(3){font-size:clamp(.95rem,3vw,2rem)}
+        .story-line:nth-child(4){font-size:clamp(.7rem,2.2vw,1.5rem);white-space:normal;line-height:1.35}
         .story-roses{font-size:clamp(1rem,3vw,1.6rem);margin-top:.8rem;opacity:0;text-align:center;display:block}
 
         @media (max-width: 768px){
             .story-line:nth-child(1){font-size:clamp(2.4rem,8vw,4.5rem);}
             .story-line:nth-child(2),
-            .story-line:nth-child(3),
-            .story-line:nth-child(4){font-size:clamp(1.4rem,5vw,2.6rem);}
+            .story-line:nth-child(3){font-size:clamp(1.4rem,5vw,2.6rem);}
+            .story-line:nth-child(4){font-size:clamp(1rem,3.6vw,1.8rem);white-space:normal;line-height:1.35}
             .story-roses{font-size:clamp(1.6rem,5vw,2.2rem);}
         }
 
@@ -976,7 +981,7 @@
 <section class="hero">
     <div class="hero-top-ornament"></div>
     <div class="hero-inner">
-        <div class="crown-label"><span>✦ &nbsp; Un año explorando el universo &nbsp; ✦</span></div>
+        <div class="crown-label"><span>✦ Un año explorando el universo ✦</span></div>
         <div class="photo-frame-wrap" id="moonFrame">
             <div class="moon-orbit">
                 <div class="photo-ring"></div>
